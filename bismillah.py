@@ -70,8 +70,8 @@ for i in range(len(kode_negara)):
 
 for i in range(len(nama_negara)):
     if nama_negara[i] == N:
-        kodehuruf = kode_negara[i]
-        kodeangka = kode_angka[i]
+        kodenegarahuruf = kode_negara[i]
+        kodenegaraangka = kode_angka[i]
         reg = region[i]
         subreg = subregion[i]
 #dataframe yang berisi informasi lengkap negara
@@ -85,7 +85,7 @@ list_tahun = []
 # Mengambil data produksi dan tahun berdasarkan negara yang dipilih pada
 # option dan memasukkannya ke list yang telah dibuat
 for i in range(len(list(df['kode_negara']))):
-    if kodehuruf == list(df['kode_negara'])[i]:
+    if kodenegarahuruf == list(df['kode_negara'])[i]:
         list_produksi.append(list(df['produksi'])[i])
         list_tahun.append(list(df['tahun'])[i])
 
