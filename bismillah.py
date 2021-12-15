@@ -7,7 +7,7 @@ Referensi API Streamlit: https://docs.streamlit.io/library/api-reference
 
 import numpy as np
 import pandas as pd
-#from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 import streamlit as st
 import json
 
@@ -78,10 +78,6 @@ for i in range(len(nama_negara)):
 df_lengkap = pd.DataFrame(list(zip(nama_negara, kode_negara, kode_angka, region, subregion)), columns=[
                          'Negara', 'alpha-3', 'Kode_Negara', 'Region', 'Sub-Region'])
 
-tulis_kode = []
-for i, kode in enumerate(kode_negara):
-    tulis_kode.append(f"{str(i+1)}. {kode}\n")
-tulis_kode = ' '.join(map(str, tulis_kode))
 
 list_produksi = []
 list_tahun = []
