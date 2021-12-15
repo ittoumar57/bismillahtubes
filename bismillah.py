@@ -7,7 +7,6 @@ Referensi API Streamlit: https://docs.streamlit.io/library/api-reference
 
 import numpy as np
 import pandas as pd
-from matplotlib import cm
 from matplotlib import pyplot as plt
 import streamlit as st
 import json
