@@ -28,14 +28,6 @@ for kode in kode_negara:
     total_produksi.append(jumlah_produksi.sum())
 #print(f"Total Produksi: {total_produksi}")
 
-'''max_produksi = np.asarray(jumlah_produksi).max()
-max_produksi_idx = np.asarray(jumlah_produksi).argmax()'''
-
-'''tulis_kode = []
-for i, kode in enumerate(kode_negara):
-    tulis_kode.append(f"{str(i+1)}. {kode}\n")
-tulis_kode = ' '.join(map(str, tulis_kode))
-tulis_kode'''
 
 file_json = pd.read_json('kode_negara_lengkap.json')
 df_json = pd.DataFrame.from_dict(file_json)
@@ -64,7 +56,6 @@ for i in range(len(kode_negara)):
             subregion_json.append(list(df_json['sub-region'])[j])
 
 df_lengkap = pd.DataFrame(list(zip(nama_negara, kode_negara, kode_angka, region_json, subregion_json)), columns=['negara', 'alpha-3', 'kode negara', 'region', 'sub-region'])
-df_lengkap
 
 ############### sidebar ###############
 st.sidebar.title("Pengaturan")
