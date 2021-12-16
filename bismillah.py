@@ -85,14 +85,14 @@ for i in range(len(list(df_clean['kode_negara']))):
         list_produksi.append(list(df_clean['produksi'])[i])
         list_tahun.append(list(df_clean['tahun'])[i])
 judul1 = ("Produksi Minyak Negara ",N)
-graf1 = plt.plot(list_tahun,list_produksi),plt.title('Grafik Negara '+N),plt.xlabel('Tahun'),plt.ylabel('Produksi')
+graf1 = plt.plot(list_tahun,list_produksi),plt.title('Grafik Negara ',N),plt.xlabel('Tahun'),plt.ylabel('Produksi')
 grafik1.pyplot(graf1)
 
 ###persoalan b###
 T = st.sidebar.select_slider("Tahun ", list_tahun)
 B1 = st.sidebar.number_input(int(input("Jumlah Negara ",min_value=1, max_value=None)))
 
-judul2 = "Grafik "+B1+" Besar Negara Pada Tahun "+T
+judul2 = ("Grafik ",B1," Besar Negara Pada Tahun ",T)
 df_nomer2 = df_clean.loc[df['tahun'] ==T].sort_values(by=['produksi'], ascending=False)
 
 nama_df2 = []
@@ -123,7 +123,7 @@ negara3 = df_nomer3['kode_negara']
 produksi_nomer3 = df_nomer3['produksi_kumulatif']
 
 graf3 = plt.pie(df_nomer3['produksi_kumulatif'],labels=df_nomer3['kode_negara'])
-graf3 = plt.title("Grafik "+str(B2)+" Negara Terbesar")
+graf3 = plt.title("Grafik ",str(B2)," Negara Terbesar")
 st.pyplot(graf3)
 ############### upper left column ###############
 
