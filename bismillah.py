@@ -67,6 +67,7 @@ N = st.sidebar.selectbox("Pilih Negara", nama_negara)
 judul1, judul2 = st.columns(2)
 grafik1,grafik2 = st.columns(2)
 
+kodenegarahuruf = []
 for i in range(len(nama_negara)):
     if nama_negara[i] == N:
         kodenegarahuruf = kode_negara[i]
