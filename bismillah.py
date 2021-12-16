@@ -86,7 +86,7 @@ for i in range(len(list(df_clean['kode_negara']))):
         list_tahun.append(list(df_clean['tahun'])[i])
 judul1 = ("Produksi Minyak Negara ",N)
 graf1 = plt.plot(list_tahun,list_produksi),plt.title('Grafik Negara ',N),plt.xlabel('Tahun'),plt.ylabel('Produksi')
-grafik1.pyplot(graf1)
+st.pyplot(graf1)
 
 ###persoalan b###
 T = st.sidebar.select_slider("Tahun ", list_tahun)
@@ -106,7 +106,7 @@ df_nomer2 = df_nomer2[:B1]
 
 
 graf2 = plt.barh(df_nomer2['negara'],df_nomer2['produksi'])
-grafik2.pyplot(graf2)
+st.pyplot(graf2)
 ############### persoalan c ###############
 
 B2 = int(st.number_input("Jumlah Negara ",min_value=1,max_value=None))
