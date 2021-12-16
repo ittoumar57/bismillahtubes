@@ -84,7 +84,7 @@ for i in range(len(list(df_clean['kode_negara']))):
     if kodenegarahuruf == list(df_clean['kode_negara'])[i]:
         list_produksi.append(list(df_clean['produksi'])[i])
         list_tahun.append(list(df_clean['tahun'])[i])
-judul1 = ("Produksi Minyak Negara "+N)
+judul1 = ("Produksi Minyak Negara ",N)
 graf1 = plt.plot(list_tahun,list_produksi),plt.title('Grafik Negara '+N),plt.xlabel('Tahun'),plt.ylabel('Produksi')
 grafik1.pyplot(graf1)
 
